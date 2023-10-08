@@ -13,15 +13,15 @@
 
 
         <header class="  bg-black h-14 flex content-center ">
-            <nav class="max-w-7xl mx-auto  grid grid-cols-12 content-center gap-2" >
+            <nav class="max-w-7xl mx-auto px-4 grid grid-cols-12  content-center gap-2 max-lg:grid-cols-11" >
                 <img class="w-28 h-8" src="https://upload.wikimedia.org/wikipedia/commons/4/49/BBC_logo_white.svg" alt="">
-                <div class="col-span-2 pl-5">
-                    <a href="#" class="text-white font-bold">
-                        <i class="fa-solid fa-user no-underline" style="color: #ffffff;"></i>
-                        Sign in
+                <div class="col-span-2 pl-5 max-lg:col-span-1">
+                    <a href="#" class="text-white font-bold max-lg:flex justify-center content-center">
+                        <i class="fa-solid fa-user no-underline inline-block" style="color: #ffffff;"></i>
+                        <span class="max-lg:hidden">Sign in</span>
                     </a>
                 </div>
-                <ul class="grid grid-cols-9 text-white items-center col-start-4 col-end-11 font-bold">
+                <ul class="grid grid-cols-9 text-white items-center col-start-4 col-end-11 max-xl:col-end-12 max-lg:grid-cols-8 font-bold max-lg:col-start-3 max-lg:col-end-11">
                     <li class="text-center hover:border-b-2 border-white"><a href="#">Home</a></li>
                     <li class="text-center hover:border-b-2 border-red-600"><a href="#">News</a></li>
                     <li class="text-center hover:border-b-2 border-yellow-300"><a href="#">Sport</a></li>
@@ -29,23 +29,28 @@
                     <li class="text-center hover:border-b-2 border-blue-800"><a href="#">Worklife</a></li>
                     <li class="text-center hover:border-b-2 border-green-700"><a href="#">Travel</a></li>
                     <li class="text-center hover:border-b-2 border-green-950"><a href="#">Futur</a></li>
-                    <li class="text-center hover:border-b-2 border-purple-900"><a href="#">Culture</a></li>
+                    <li class="text-center hover:border-b-2 border-purple-900 max-lg:hidden"><a href="#">Culture</a></li>
                     <li class="text-center hover:border-b-2 border-white"><a href="#">...</a></li>
                 </ul>
-                <input class="col-end-13 col-span-2 w-30 rounded-md px-2" type="text" placeholder="Search BBC">
+                <input class="col-end-13 col-span-2 w-30 rounded-md px-2 max-xl:hidden" type="text" placeholder="Search BBC">
+                <i class="fa-solid fa-magnifying-glass hidden max-xl:contents text-white text-lg text-center order-last "></i>
             </nav>
         </header>
-        <main class="max-w-7xl mx-auto">
+        <main class="max-w-7xl mx-auto px-4">
+            <!-- title -->
             <section class="title">
                 <h2 class="flex justify-between content-center text-gray-500 text-2xl font-bold">
                     <span>Welcome to BBC.com</span>
                     <span class="date"></span>
                 </h2>
             </section>
+            <!-- Promo -->
             <section class="promo my-6  h-96">
+
+                <!-- TODO you have to add media query to max-lg -->
                 <div>
-                    <ul class="grid grid-cols-4 grid-rows-2 gap-2 h-96">
-                        <li class="col-span-2 row-span-2 h-96 bg-orange-400"><a href="#"></a></li>
+                    <ul class="grid grid-cols-4 grid-rows-2 gap-2 h-full">
+                        <li class="col-span-2 row-span-2 h-96 bg-orange-400 max-lg:"><a href="#"></a></li>
                         <li class="bg-blue-600"><a href="#"></a></li>
                         <li class="bg-blue-600"><a href="#"></a></li>
                         <li class="bg-blue-600"><a href="#"></a></li>
@@ -161,7 +166,18 @@
             <section class="more">
                 <h2 class="text-2xl font-bold border-l-4 border-gray-600 my-6 pl-3">More around BBC</h2>
                 <ul class="moreStyle grid grid-rows-5 grid-cols-4 gap-4 h-96">
-                    <li class="row-span-6 bg-slate-400"><a href="#"></a></li>
+                    <li class="row-span-6 bg-slate-400">
+                        <ul class="h-full [&>*:nth-child(odd)]:bg-red-500 [&>*:nth-child(even)]:bg-blue-500">
+                            <li class="h-12"></li>
+                            <li class="h-12"></li>
+                            <li class="h-12"></li>
+                            <li class="h-12"></li>
+                            <li class="h-12"></li>
+                            <li class="h-12"></li>
+                            <li class="h-12"></li>
+                            <li class="h-12"></li>
+                        </ul>
+                    </li>
                     <li class="row-span-3 col-span-3 bg-red-500"><a href="#"></a></li>
                     <li class="bg-lime-700"><a href="#"></a></li>
                     <li class="bg-lime-700"><a href="#"></a></li>

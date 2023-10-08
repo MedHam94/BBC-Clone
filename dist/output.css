@@ -534,6 +534,10 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
+.order-last {
+  order: 9999;
+}
+
 .col-span-2 {
   grid-column: span 2 / span 2;
 }
@@ -562,10 +566,6 @@ video {
   grid-row: span 3 / span 3;
 }
 
-.row-span-4 {
-  grid-row: span 4 / span 4;
-}
-
 .row-span-6 {
   grid-row: span 6 / span 6;
 }
@@ -585,8 +585,17 @@ video {
   margin-bottom: 1.5rem;
 }
 
+.my-auto {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
 .block {
   display: block;
+}
+
+.inline-block {
+  display: inline-block;
 }
 
 .flex {
@@ -595,6 +604,14 @@ video {
 
 .grid {
   display: grid;
+}
+
+.hidden {
+  display: none;
+}
+
+.h-12 {
+  height: 3rem;
 }
 
 .h-14 {
@@ -613,8 +630,17 @@ video {
   height: 24rem;
 }
 
-.h-auto {
-  height: auto;
+.h-full {
+  height: 100%;
+}
+
+.h-fit {
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+.h-5 {
+  height: 1.25rem;
 }
 
 .h-6 {
@@ -641,44 +667,8 @@ video {
   grid-template-columns: repeat(9, minmax(0, 1fr));
 }
 
-.grid-cols-3 {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-}
-
-.grid-cols-2 {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-}
-
-.grid-cols-5 {
-  grid-template-columns: repeat(5, minmax(0, 1fr));
-}
-
-.grid-cols-10 {
-  grid-template-columns: repeat(10, minmax(0, 1fr));
-}
-
-.grid-cols-7 {
-  grid-template-columns: repeat(7, minmax(0, 1fr));
-}
-
-.grid-cols-6 {
-  grid-template-columns: repeat(6, minmax(0, 1fr));
-}
-
 .grid-rows-2 {
   grid-template-rows: repeat(2, minmax(0, 1fr));
-}
-
-.grid-rows-6 {
-  grid-template-rows: repeat(6, minmax(0, 1fr));
-}
-
-.grid-rows-3 {
-  grid-template-rows: repeat(3, minmax(0, 1fr));
-}
-
-.grid-rows-4 {
-  grid-template-rows: repeat(4, minmax(0, 1fr));
 }
 
 .grid-rows-5 {
@@ -693,24 +683,28 @@ video {
   align-items: center;
 }
 
+.justify-center {
+  justify-content: center;
+}
+
 .justify-between {
   justify-content: space-between;
+}
+
+.justify-items-center {
+  justify-items: center;
 }
 
 .gap-2 {
   gap: 0.5rem;
 }
 
-.gap-5 {
-  gap: 1.25rem;
-}
-
 .gap-4 {
   gap: 1rem;
 }
 
-.gap-3 {
-  gap: 0.75rem;
+.gap-5 {
+  gap: 1.25rem;
 }
 
 .rounded-md {
@@ -790,9 +784,19 @@ video {
   background-color: rgb(99 102 241 / var(--tw-bg-opacity));
 }
 
+.bg-lime-700 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(77 124 15 / var(--tw-bg-opacity));
+}
+
 .bg-orange-400 {
   --tw-bg-opacity: 1;
   background-color: rgb(251 146 60 / var(--tw-bg-opacity));
+}
+
+.bg-red-500 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(239 68 68 / var(--tw-bg-opacity));
 }
 
 .bg-sky-500 {
@@ -805,19 +809,14 @@ video {
   background-color: rgb(148 163 184 / var(--tw-bg-opacity));
 }
 
-.bg-red-500 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(239 68 68 / var(--tw-bg-opacity));
-}
-
-.bg-lime-700 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(77 124 15 / var(--tw-bg-opacity));
-}
-
 .px-2 {
   padding-left: 0.5rem;
   padding-right: 0.5rem;
+}
+
+.px-4 {
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 .py-5 {
@@ -844,6 +843,11 @@ video {
 .text-2xl {
   font-size: 1.5rem;
   line-height: 2rem;
+}
+
+.text-lg {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
 }
 
 .text-xl {
@@ -875,4 +879,78 @@ video {
 
 .hover\:border-b-2:hover {
   border-bottom-width: 2px;
+}
+
+@media not all and (min-width: 1280px) {
+  .max-xl\:col-end-12 {
+    grid-column-end: 12;
+  }
+
+  .max-xl\:contents {
+    display: contents;
+  }
+
+  .max-xl\:hidden {
+    display: none;
+  }
+}
+
+@media not all and (min-width: 1024px) {
+  .max-lg\:col-span-1 {
+    grid-column: span 1 / span 1;
+  }
+
+  .max-lg\:col-span-full {
+    grid-column: 1 / -1;
+  }
+
+  .max-lg\:col-start-3 {
+    grid-column-start: 3;
+  }
+
+  .max-lg\:col-start-2 {
+    grid-column-start: 2;
+  }
+
+  .max-lg\:col-end-10 {
+    grid-column-end: 10;
+  }
+
+  .max-lg\:col-end-11 {
+    grid-column-end: 11;
+  }
+
+  .max-lg\:block {
+    display: block;
+  }
+
+  .max-lg\:flex {
+    display: flex;
+  }
+
+  .max-lg\:hidden {
+    display: none;
+  }
+
+  .max-lg\:w-full {
+    width: 100%;
+  }
+
+  .max-lg\:grid-cols-8 {
+    grid-template-columns: repeat(8, minmax(0, 1fr));
+  }
+
+  .max-lg\:grid-cols-11 {
+    grid-template-columns: repeat(11, minmax(0, 1fr));
+  }
+}
+
+.\[\&\>\*\:nth-child\(even\)\]\:bg-blue-500>*:nth-child(even) {
+  --tw-bg-opacity: 1;
+  background-color: rgb(59 130 246 / var(--tw-bg-opacity));
+}
+
+.\[\&\>\*\:nth-child\(odd\)\]\:bg-red-500>*:nth-child(odd) {
+  --tw-bg-opacity: 1;
+  background-color: rgb(239 68 68 / var(--tw-bg-opacity));
 }
